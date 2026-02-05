@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Models;
-
+namespace App\Core\Domain\Entities;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -90,5 +89,18 @@ class User extends Authenticatable implements JWTSubject
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // relations student
+
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
+
+    // relations teacher
+    public function teacher()
+    {
+        return $this->hasOne(Teacher::class);
     }
 }

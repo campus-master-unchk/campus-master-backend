@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
+            $table->enum('status', ['active', 'inactive'])->default('active');  
             $table->string('password');
             $table->enum('user_type', ['student', 'teacher', 'admin']);
             $table->rememberToken();

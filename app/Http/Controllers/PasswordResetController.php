@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Core\Domain\Entities\User;
 use App\Mail\PasswordResetMail;
-use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
