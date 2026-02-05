@@ -94,6 +94,16 @@ php artisan app:create-admin
 
 ---
 
+
+## 📱 Frontend
+Renseignez le lien de votre frontend dans le fichier `.env` :
+
+```env
+APP_URL_FRONT = http://localhost:3000
+```
+
+
+
 ## Executer le projet
 
 
