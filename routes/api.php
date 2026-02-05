@@ -13,6 +13,7 @@ use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\SpecialityController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AnalyticsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +54,8 @@ Route::middleware('auth:api')->group(function () {
         Route::post('modules', [ModuleController::class, 'createModule']);
         Route::put('modules/{id}', [ModuleController::class, 'updateModule']);
         Route::delete('modules/{id}', [ModuleController::class, 'deleteModule']);
+        // Analytics
+        Route::get('/analytics', [AnalyticsController::class, 'getStatisticsDashboard']);
     });
 
     /* -----------------------------------------------------------
