@@ -48,7 +48,7 @@ class CourseController extends Controller
             'module_id' => 'required|exists:modules,id',
             'image' => 'required|image|max:2048',
             'description' => 'nullable',
-            'state' => 'nullabe',
+            'state' => 'nullable',
             // Validation ressources multiples
             'resources' => 'nullable|array',
             'resources.*.name' => 'required|string',
@@ -78,7 +78,7 @@ class CourseController extends Controller
             'module_id' => 'required|exists:modules,id',
             'image' => 'required|image|max:2048',
             'description' => 'nullable',
-            'state' => 'nullabe',
+            'state' => 'nullable',
             // Validation ressources multiples
             'resources' => 'nullable|array',
             'resources.*.name' => 'required|string',

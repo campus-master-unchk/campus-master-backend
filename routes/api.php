@@ -65,7 +65,7 @@ Route::middleware('auth:api')->group(function () {
         // Gestion des Cours
         Route::get('/courses', [CourseController::class, 'myCourses']);
         Route::post('/courses', [CourseController::class, 'store']);
-        Route::post('/courses/{id}', [CourseController::class, 'update']); // Utiliser POST pour l'upload de fichiers
+        Route::put('/courses/{id}', [CourseController::class, 'update']); // Utiliser POST pour l'upload de fichiers
         Route::delete('/courses/{id}', [CourseController::class, 'destroy']);
         Route::patch('/courses/{id}/state', [CourseController::class, 'changeState']);
 
